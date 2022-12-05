@@ -18,7 +18,5 @@ const makeIngridientsList = array => {
     });
     return elem;
 }
-
 const elements = makeIngridientsList(ingredients);
-
-ingredientsListEl.append(...elements)
+ingredientsListEl.append(...elements) 
