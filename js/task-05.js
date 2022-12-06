@@ -10,3 +10,4 @@ function outputOperation(event) {
         output.textContent="Anonymous"
     };
 }
+
