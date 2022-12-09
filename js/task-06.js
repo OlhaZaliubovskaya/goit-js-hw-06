@@ -1,19 +1,17 @@
-const input = document.getElementById("validation-input");
+let input = document.getElementById('validation-input');
 
 input.addEventListener("blur", validation);
 
 function validation(event) {
     const validLength = Number(input.dataset.length);
-    const currentLength = Number(event.currentTarget.value.length);
+    const currentLength = event.currentTarget.value.length;
+    input.classList.remove("valid", "invalid");
 
     if (currentLength === validLength) {
-        input.classList.remove("invalid")
         input.classList.add("valid");
+        return
     }
     if (currentLength !== validLength) {
         input.classList.add("invalid")
-    }
-    if (!currentLength) {
-        input.classList.remove("valid", "invalid");
     }
 }
